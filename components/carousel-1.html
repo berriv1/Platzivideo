@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carousel</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow:hidden;
+        
+    }
+    .carousel {
+        width: 100%;
+        overflow: scroll; 
+        padding: 30px;
+        position: relative;
+    }
+    .carousel__container {
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+        
+    }
+    .carousel-item {
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background: palevioletred;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms;
+        transform-origin: center left;
+        position: relative;
+    }
+    .carousel-item:hover ~ .carousel-item {
+        transform: translate3d(100px, 0, 0);
+    }
+    .carousel__container:hover .carousel-item {
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carousel-item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carousel-item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel-item__details {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        font-size: 16px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 165px;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        color: white;
+        font-weight: bold;
+    }
+    .carousel-item:hover .carousel-item__details {
+        opacity: 1;
+        transition: 450ms opacity;
+        
+    }
+    .carousel-item__details--btn {
+        width: 20px;
+        height: 20px;
+        padding: 0.1px;
+    }
+    .carousel-item__details--btn:hover {
+         transform: scale(1.3);
+         transition: 450ms opacity;
+    }
+    .carousel-item__details--title,
+    .carousel-item__details--subtitle {
+         margin: 1px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2489986/pexels-photo-2489986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="buying music">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+
+
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2181230/pexels-photo-2181230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="night city">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2716438/pexels-photo-2716438.png?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="City Night ">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/1821349/pexels-photo-1821349.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Fortune wheel">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/1528348/pexels-photo-1528348.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="neon">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2355518/pexels-photo-2355518.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="belle">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="rainy day">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/2441844/pexels-photo-2441844.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="fly">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/1398195/pexels-photo-1398195.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="golden gate">
+                <div class="carousel-item__details">
+                    <div>
+                        <img class="carousel-item__details--btn" src="icons/play-icon.png">
+                        <img class="carousel-item__details--btn" src="icons/plus-icon.png">
+                    </div>
+                    <p class="carousel-item__details--title"> Titulo descriptivo</p>
+                    <p class="carousel-item__details--subtitle"> 2019 16+ 114 minutos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
