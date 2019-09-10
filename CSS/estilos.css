@@ -2,9 +2,12 @@ body{
     margin: 0;
     background-color: #8F57FD;
     font-family: 'Muli', sans-serif;
+    overflow: auto; 
 }
+
+/* header styles  */
 .header {
-    background-color: #21C08B;
+    background-color: #8F57FD;
     width: 100%;
     height: 80px;
     display: flex;
@@ -55,6 +58,8 @@ body{
     margin: 0px;
     color: white;
 }
+
+/* main styles */
 .main {
     display: flex;
     align-items: center;
@@ -86,7 +91,111 @@ body{
     width: 70%;
     outline: none;
 }
-
+/* carousel styles */
+ .carousel {
+        width: 100%;
+        overflow: hidden; 
+        padding: 30px;
+        box-sizing: border-box;
+        position: relative;
+    }
+.carousel:hover {
+    overflow: scroll;
+}
+.carousel__container {
+    white-space: nowrap;
+    margin: 80px 0px 45px 0;
+    padding-bottom: 0px;
+}
+.carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background: palevioletred;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms;
+    transform-origin: center left;
+    position: relative;
+}
+.carousel-item:hover ~ .carousel-item {
+    transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-item__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 16px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 165px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+}
+.carousel-item:hover .carousel-item__details {
+    opacity: 1;
+    transition: 450ms opacity;
+}
+.carousel-item__details--btn {
+    width: 20px;
+    height: 20px;
+    padding: 0.1px;
+}
+.carousel-item__details--btn:hover {
+        transform: scale(1.3);
+        transition: 450ms opacity;
+}
+.carousel-item__details--title,
+.carousel-item__details--subtitle {
+        margin: 1px;
+    font-size: 14px;
+    font-weight: 400;
+}
+/* carousel scrollbar styles adicional*/
+.carousel::-webkit-scrollbar {
+    width: 0;     /* Tamaño del scroll en vertical */
+    height: 10px;    /* Tamaño del scroll en horizontal */
+}
+.carousel::-webkit-scrollbar-thumb {
+    line-height: 20px;
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.carousel::-webkit-scrollbar-thumb {
+    background: rgb(161, 131, 219);
+    border-radius: 4px;  
+}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: rgb(161, 131, 219);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+.carousel::-webkit-scrollbar-thumb:active {
+    background-color: rgb(161, 131, 219);
+}
+/* Cambiamos el fondo cuando esté en active o hover */
+.carousel::-webkit-scrollbar-track:hover,
+.carousel::-webkit-scrollbar-track:active {
+  background: rgb(152, 113, 230);
+}
+/* login styles */
 .login {
     background: linear-gradient(#21C08B, #AB88FF );
     display: flex;
@@ -96,7 +205,6 @@ body{
     padding: 0px 30px;
     min-height: calc(100vh - 200px);
 }
-
 .login__container {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
