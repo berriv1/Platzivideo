@@ -2,17 +2,20 @@ body{
     margin: 0;
     background-color: #8F57FD;
     font-family: 'Muli', sans-serif;
-    overflow: auto; 
+    overflow-x: hidden; 
 }
 
 /* header styles  */
 .header {
-    background-color: #8F57FD;
+    background-color: #21C08B;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header__main{
+    background-color: #8F57FD;
 }
 .header__img {
     width: 200px;
@@ -96,7 +99,6 @@ body{
         width: 100%;
         overflow: hidden; 
         padding: 30px;
-        box-sizing: border-box;
         position: relative;
     }
 .carousel:hover {
@@ -190,14 +192,20 @@ body{
 .carousel::-webkit-scrollbar-thumb:active {
     background-color: rgb(161, 131, 219);
 }
+/* Ponemos un color de fondo y redondeamos las esquinas del track */
+.carousel::-webkit-scrollbar-track {
+    background: rgba(143, 87, 253, 0.1);
+    border-radius: 50px;
+}
 /* Cambiamos el fondo cuando esté en active o hover */
 .carousel::-webkit-scrollbar-track:hover,
 .carousel::-webkit-scrollbar-track:active {
   background: rgb(152, 113, 230);
 }
+
 /* login styles */
 .login {
-    background: linear-gradient(#21C08B, #AB88FF );
+    background: linear-gradient(#21C08B, #8F57FD );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,6 +213,7 @@ body{
     padding: 0px 30px;
     min-height: calc(100vh - 200px);
 }
+
 .login__container {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
@@ -243,7 +252,6 @@ body{
     align-items: center;
     font-size: 14px;
     margin-bottom: 10px;
-
 }
 .login__container--social-media > div > img {
     width: 30px;
@@ -259,8 +267,27 @@ body{
     font-style: 16px;
     text-decoration: none;
 }
-.login__container--register a:hover{
+.login__container--register a:hover {
     text-decoration: underline;
+}
+.login__error-container {
+    color: white;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+
+
+.login__error-container--title {
+    padding: 0;
+    margin: 10px;
+    font-size: 24px;
 }
 .input {
     background: transparent;
@@ -296,8 +323,9 @@ body{
     align-items: center;
     height: 100px;
     width: 100%;
-    background: #AB88FF;
+    background: #8F57FD;
 }
+
 .footer a {
     color: white;
     font-size: 14px;

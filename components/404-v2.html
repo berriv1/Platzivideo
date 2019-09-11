@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <title>Error 404 - 2</title>
+</head>
+
+<style>
+
+
+.login__error-container--type-404  {
+    height: 110px;
+    margin: 2px;
+    font-size: 100px;
+}
+
+
+.animated {
+    display: inline-block;
+    animation-name: error_404;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    transform-origin:  bottom;
+    height: 105px;
+    
+}
+@keyframes error_404  {
+    0% {
+       transform: rotateZ(0deg)
+    }
+  
+    
+    50% {
+       transform: rotateZ(205deg)
+    }
+
+    100% {
+       transform: rotateZ(0deg)
+    }
+}
+
+.login__error-container--title {
+    font-size: 20px;
+}
+ 
+
+</style>
+
+<body>
+    <header class="header">
+        <img  class="header__img" src="../assets/logo-platzi-video-BW2.png" alt="logo platzi">
+    </header>
+
+    <section class="login">
+        <section class="login__error-container">
+            <h1 class="login__error-container--type-404">40<div class="animated">4</div> </h1>
+            <h3 class="login__error-container--title">Pagina no encontrada</h3>
+        </section>
+    </section>
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
