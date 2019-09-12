@@ -1,3 +1,6 @@
+
+$blanco: $blanco;
+
 body{
     margin: 0;
     background-color: #8F57FD;
@@ -41,7 +44,7 @@ body{
     margin: 10px 0px;
 }
 .header__menu li a {
-    color: white;
+    color: $blanco;
     text-decoration: none;
 }
 .header__menu li a:hover {
@@ -59,7 +62,7 @@ body{
 }
 .header__menu--profile p {
     margin: 0px;
-    color: white;
+    color: $blanco;
 }
 
 /* main styles */
@@ -72,11 +75,11 @@ body{
     border-radius: 0 0 40px 40px;
 }
 .main__title {
-    color: white;
+    color: $blanco;
     font-size: 25px;
 }
 .categories__title {
-    color: white;
+    color: $blanco;
     font-size: 16px;
     position: absolute;
     padding-left: 30px;
@@ -84,9 +87,9 @@ body{
 }
 .main__input--search {
     background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
+    border: 2px solid $blanco;
     border-radius: 50px;
-    color: white;
+    color: $blanco;
     font-family: 'Muli', sans-serif;
     font-size: 16px;
     height: 50px;
@@ -105,7 +108,7 @@ body{
     overflow: scroll;
 }
 .carousel__container {
-    white-space: nowrap;
+    $blanco-space: nowrap;
     margin: 80px 0px 45px 0;
     padding-bottom: 0px;
 }
@@ -148,7 +151,7 @@ body{
     left: 0px;
     right: 0;
     bottom: 0;
-    color: white;
+    color: $blanco;
     font-weight: bold;
 }
 .carousel-item:hover .carousel-item__details {
@@ -216,9 +219,9 @@ body{
 
 .login__container {
     background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
+    border: 2px solid $blanco;
     border-radius: 40px;
-    color: white;
+    color: $blanco;
     padding: 60px 68px 40px;
     min-height: 700px;
     width: 300px;
@@ -234,13 +237,13 @@ body{
     font-size: 14px;
 }
 .login__container--remember-me {
-    color: white;
+    color: $blanco;
     display: flex;
     justify-content: space-between;
     margin-top: 10px; 
 }
 .login__container--remember-me a {
-    color: white;
+    color: $blanco;
     font-size: 14px;
     text-decoration: none;
 }
@@ -262,7 +265,7 @@ body{
     text-align: center;
 }
 .login__container--register a{
-    color: white;
+    color: $blanco;
     font-weight: bold;
     font-style: 16px;
     text-decoration: none;
@@ -271,7 +274,7 @@ body{
     text-decoration: underline;
 }
 .login__error-container {
-    color: white;
+    color: $blanco;
     height: 100%;
     text-align: center;
     display: inline-block;
@@ -294,7 +297,7 @@ body{
     border-left: 0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid $blanco;
     font-size: 16px;
     font-family: 'Muli', sans-serif;
     margin-bottom: 20px;
@@ -303,13 +306,13 @@ body{
     height: 50px;
 }
 ::placeholder{
-    color: white;
+    color: $blanco;
 }
 .button {
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 25px;
-    color: white;
+    color: $blanco;
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
@@ -327,7 +330,7 @@ body{
 }
 
 .footer a {
-    color: white;
+    color: $blanco;
     font-size: 14px;
     cursor: pointer;
     padding-left: 30px;
